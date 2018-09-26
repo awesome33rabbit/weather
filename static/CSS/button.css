@@ -1,0 +1,180 @@
+#button1 {
+	/*padding: 20px;*/
+	width: 40px;
+	height: 40px;
+	background-color: lightblue;
+	position: absolute;
+	top: 570px;
+	left: 57px;
+	z-index: 100;
+}
+
+#button2 {
+	/*padding: 20px;*/
+	width: 70px;
+	height: 30px;
+	background-color: lightblue;
+	position: absolute;
+	top: 5px;
+	left: 325px;
+	z-index: 100;
+	border-radius: 5px;
+}
+
+#button3 {
+	/*padding: 20px;*/
+	width: 70px;
+	height: 30px;
+	background-color: lightblue;
+	position: absolute;
+	top: 45px;
+	left: 325px;
+	z-index: 100;
+	border-radius: 5px;
+}
+
+#button4 {
+	/*padding: 20px;*/
+	width: 70px;
+	height: 30px;
+	background-color: lightblue;
+	position: absolute;
+	top: 85px;
+	left: 325px;
+	z-index: 100;
+	border-radius: 5px;
+}
+
+#button5 {
+	/*padding: 20px;*/
+	width: 70px;
+	height: 30px;
+	background-color: lightblue;
+	position: absolute;
+	top: 125px;
+	left: 325px;
+	z-index: 100;
+	border-radius: 5px;
+}
+
+#close1 {
+	/*z-index: 100;*/
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+
+#close2 {
+	/*z-index: 100;*/
+	width: 35px;
+	height: 25px;
+	position: absolute;
+	left: 10px;
+	top: 5px;
+	font-size: 17px;
+	font-weight: bold;
+	border: 0px;
+	z-index: 100;
+}
+
+#close3 {
+	/*z-index: 100;*/
+	width: 35px;
+	height: 25px;
+	position: absolute;
+	left: 10px;
+	top: 5px;
+	z-index: 100;
+}
+
+#close4 {
+	/*z-index: 100;*/
+	width: 35px;
+	height: 25px;
+	position: absolute;
+	left: 10px;
+	top: 5px;
+	z-index: 111;
+}
+
+#close5 {
+	/*z-index: 100;*/
+	width: 35px;
+	height: 25px;
+	position: absolute;
+	left: 10px;
+	top: 5px;
+	z-index: 111;
+}
+
+
+
+#button1, #button2, #button3, #button4, #button5 {
+	display:block;
+/*	width:202px;
+	height:52px;*/
+	text-align:center;
+	font-family:arial,verdana,sans-serif,'新宋体';
+	font-weight:bold;
+/*	font-size:22px;*/
+	background:#428bca;
+	color:#fff;
+	text-decoration:none;
+	border: 3px solid #357ebd;
+	cursor: pointer;
+}
+
+#close2, #close3, #close4, #close5 {
+	background:#428bca;
+	color:#fff;
+	text-decoration:none;
+	border: 3px solid #357ebd;
+	cursor: pointer;
+}
+
+#button1:hover,
+#button2:hover,
+#button3:hover,
+#button4:hover,
+.search_city:hover,
+#close2:hover,
+#close3:hover,
+#close4:hover {
+	background:#1165ae;
+}
+button:active{
+	background:#0d79d5;
+}
+
+.search_city {
+    width: 50px;
+    height: 26px;
+    display: inline-block;
+    text-align: center;
+    font-family:arial,verdana,sans-serif,'新宋体';
+    font-weight:bold;
+    background:#428bca;
+	color:#fff;
+	text-decoration:none;
+	border: 3px solid #357ebd;
+	cursor:pointer;
+	/*background-color: black;*/
+    /*position: absolute;*/
+}
+
+#cityname {
+	height: 23px;
+	/*background-color: rgba(110,173,253,0.8);*/
+	/*background-color:transparent;*/
+	background-color: #8BBDFD;
+	border: 1px;
+	outline: none;
+}
+
+#myform {
+	position: absolute;
+	top: 140px;
+	left: 80px;
+}
