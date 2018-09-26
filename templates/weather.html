@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My work</title>
+    <link rel="icon" href="{{url_for('static', filename='favicon.ico')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/weather.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/pic.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/time.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/button.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/rili.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='weather-icons.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/chat.css')}}">
+
+    <script src="{{url_for('static', filename='js/time.js')}}"></script>
+    <script src="{{url_for('static', filename='js/nongli.js')}}"></script>
+    <script src="{{url_for('static', filename='js/sha1.js')}}"></script>
+
+</head>
+
+<body onload="getTime()">
+    <div id="mybackground">
+        <a href="/">退出</a>
+    <form id="myform" style="" method="post" action="/search">
+        <span></span><input type="text" name="cityname" id="cityname" value="&nbsp&nbsp请输入您要查询的城市" onFocus="if(value==defaultValue){value='';this.style.color='#357EBD'}" onBlur="if(!value){value=defaultValue;this.style.color='#fff'}" style="color:#fff" autocomplete="off">
+        <button class="search_city" type="submit" id="searchBtn">搜索</button>
+    </form>
+    <form id="myvoice" method="post" action="/voice">
+        <button class="btn-vioce" type="submit">vioce</button>
+    </form>
+        <div>
+            <div id="main_time">
+                <div id="time"></div>
+                <div id="data"></div>
+                <div id="week"></div>
+            </div>
+            <button id="button2">天气预测</button>
+            <button id="button3">出行指数</button>
+            <button id="button4">日历备忘</button>
+            <button id="button5">AI chat</button>
+        </div>
+        <div id="move"></div>
+
+
+        <div id="wea">
+            <div class="wea_now">
+                <div class="tempture">
+                    <div class="container">
+                        {% block weather_now %}{% endblock %}
+                        <img src="{{url_for('static', filename='pic/weatherpic/wet.png')}}" alt="sorry" class="p_wet">
+                        <img src="{{url_for('static', filename='pic/weatherpic/pre.png')}}" alt="sorry" class="p_pre">
+                        <img src="{{url_for('static', filename='pic/weatherpic/feel.png')}}" alt="sorry" class="p_feel">
+                        <img src="{{url_for('static', filename='pic/weatherpic/air.png')}}" alt="sorry" class="p_air">
+                        <img src="{{url_for('static', filename='pic/weatherpic/daytime.png')}}" alt="sorry" class="p_daytime">
+                        <img src="{{url_for('static', filename='pic/weatherpic/wind.png')}}" alt="sorry" class="p_wind">
+                        <img src="{{url_for('static', filename='pic/weatherpic/power.png')}}" alt="sorry" class="p_power">
+                        <img src="{{url_for('static', filename='pic/weatherpic/sunup.png')}}" alt="sorry" class="p_sunup">
+                        <img src="{{url_for('static', filename='pic/weatherpic/sundown.png')}}" alt="sorry" class="p_sundown">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="page2">
+            <div id="day_msg">
+                <div class="day123">
+                    <div class="day1">
+                        <div class="day_time">今天</div>
+                        {% block day1 %}{% endblock %}
+                        <div class="wt"><span><img src="{{url_for('static', filename='pic/weatherpic/2.png')}}"></span></div>
+                    </div>
+                    <div class="day2">
+                        <div class="day_time"><span>明天</span></div>
+                        {% block day2 %}{% endblock %}
+                        <hr class="hr4">
+                        <div class="wt"><span><img src="{{url_for('static', filename='pic/weatherpic/2.png')}}"></span></div>
+                    </div>
+                    <div class="day3">
+                        <div class="day_time"><span>后天</span></div>
+                        {% block day3 %}{% endblock %}
+                        <hr class="hr4">
+                        <div class="wt"><span><img src="{{url_for('static', filename='pic/weatherpic/2.png')}}"></span></div>
+                    </div>
+                </div>
+            </div>
+            <div id="info">
+                <div class="container">
+                    {% block page_content %}{% endblock %}
+                </div>
+            </div>
+            <button id="close2" onclick="">←</button>
+        </div>
+
+
+
+
+    <div id="wea_index">
+        <div>
+            <button id="close3" onclick="">←</button>
+        </div>
+        <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td>
+                    <div class="index_desc1">
+                        <span><img src="{{url_for('static', filename='pic/index_png/allergy.png')}}" width="90px"></span>
+                        {% block index1 %}{% endblock %}
+                    </div>
+                </td>
+                <td>
+                    <div class="index_desc2">
+                        <span><img src="{{url_for('static', filename='pic/index_png/dress.png')}}" width="90px"></span>
+                        {% block index2 %}{% endblock %}
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="index_desc3">
+                        <span><img src="{{url_for('static', filename='pic/index_png/fishing.png')}}" width="90px"></span>
+                        {% block index3 %}{% endblock %}
+                    </div>
+                </td>
+                <td>
+                    <div class="index_desc4">
+                        <span><img src="{{url_for('static', filename='pic/index_png/cold.png')}}" width="90px"></span>
+                        {% block index4 %}{% endblock %}
+                    </div>
+                </td>
+            </tr>
+            <tr align="center">
+                <td>
+                    <div class="index_desc5">
+                        <span><img src="{{url_for('static', filename='pic/index_png/ultraviolet.png')}}" width="90px"></span>
+                        {% block index5 %}{% endblock %}
+                    </div>
+                </td>
+                <td>
+                    <div class="index_desc6">
+                        <span><img src="{{url_for('static', filename='pic/index_png/wash.png')}}" width="90px"></span>
+                        {% block index6 %}{% endblock %}
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="index_desc7">
+                        <span><img src="{{url_for('static', filename='pic/index_png/motion.png')}}" width="90px"></span>
+                        {% block index7 %}{% endblock %}
+                    </div>
+                </td>
+                <td>
+                    <div class="index_desc8">
+                        <span><img src="{{url_for('static', filename='pic/index_png/umbrella.png')}}" width="90px"></span>
+                        {% block index8 %}{% endblock %}
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id='main'> <!-- 用js放背景图片 -->
+        <button id="close4" onclick="">←</button>
+        <!-- 添加事件窗口 -->
+        <div id='event_window'>
+            <!-- 添加事件 -->
+            <div id="new_event">
+                <p align="center" style="margin: 10px;">--新增备忘录--</p>
+                <form onSubmit="return false;">
+                    <table id="add_event">
+                        <tr>
+                            <td>
+                                <textarea id='input_txt' placeholder="请输入日程" name="meno"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button type="reset" onclick="add_event()">新增</button>
+                                <button type="reset">重置</button>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <!-- 事件列表 -->
+            <div id="events">
+                <p align="center">--备忘录信息--</p>
+                <div id="events_list">
+                </div>
+            </div>
+        </div>
+            <!-- 隐藏添加事件窗口按钮 -->
+            <button id="hide" onclick='hide_event();'><</button>
+
+        <!-- 某日具体信息 -->
+        <div id='day_infos'>
+            <form>
+                <table border="0" width='400' height='200' >
+                    <tr>
+                        <td colspan="3" height='10' align="right">
+                            <!-- <button type="button" id="close" value="x" onclick="window.close();">x</button> -->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id='day_num'></td>
+                        <td id='day_info'>
+                            <span id='lunar_year'></span><br>
+                            <span id='lunar_date'></span><br>
+                            <span id='term_info'></span>
+                        </td>
+                        <td id='memo'>
+                        </td>
+                    </tr>
+
+                </table>
+            </form>
+
+        </div>
+
+        <!-- 选月份 -->
+        <div id="select_yearandmonth">
+            <table>
+                <tr>
+                    <!-- 年月显示 -->
+                    <td class="yearandmonth">
+                        <span id="calendar_year"></span>
+                        <span id="calendar_month"></span>
+                    </td>
+                    <td></td>
+                    <!-- 上个月按钮 -->
+                    <td>
+                        <button type='button' class='select_btn1' id='last_month' onclick="last_month" >&lt;</button>
+                    </td>
+                    <!-- 下个月按钮 -->
+                    <td>
+                        <button type='button' class='select_btn2' id='next_month' onclick="next_month">&gt;</button>
+                    </td>
+                    <!-- 回到今天 -->
+                    <td >
+                        <button type="button"  class='today_btn' id='back_to_today' onclick="back_to_today">回到今天</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 周几 -->
+        <div id='weeks'>
+            <table>
+                <tr>
+                    <td>日</td>
+                    <td>一</td>
+                    <td>二</td>
+                    <td>三</td>
+                    <td>四</td>
+                    <td>五</td>
+                    <td>六</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 日历本体 -->
+        <div id="calendar_body">
+            <table id="week_days"></table>
+        </div>
+    </div>
+    <div id="chartroom">
+        <div id="block">AI chatroom</div>
+        <div id="room_size">
+            <table id="txtHint" cellspacing="5px">
+                <tbody></tbody>
+            </table>
+        </div>
+        <div id="sendmsg">
+            <textarea type="text" id="robot" onkeypress="showHint(this.value)"/></textarea>
+            <input type="button" value="发送" onclick="addmsg()" id="btn-send" />
+        </div>
+        <button id="close5" onclick="">←</button>
+    </div>
+    </div>
+
+    <script src="{{url_for('static', filename='js/button.js')}}"></script>
+    <script src="{{url_for('static', filename='js/rili.js')}}"></script>
+    <script src="{{url_for('static', filename='js/char.js')}}"></script>
+</body>
+
+</html>
