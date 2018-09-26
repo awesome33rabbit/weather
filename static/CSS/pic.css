@@ -1,0 +1,86 @@
+.p_wind {
+	width: 60px;
+	position: absolute;
+	top: 130px;
+	left: 40px;
+}
+
+.p_feel {
+	width: 60px;
+	position: absolute;
+	top: 130px;
+	left: 175px;
+}
+
+.p_power {
+	width: 60px;
+	position: absolute;
+	top: 130px;
+	right: 40px;
+}
+
+.p_air {
+	width: 60px;
+	position: absolute;
+	top: 252px;
+	left: 30px;
+}
+
+.p_wet {
+	width: 60px;
+	position: absolute;
+	top: 252px;
+	left: 173px;
+}
+
+.p_pre {
+	width: 60px;
+	position: absolute;
+	top: 252px;
+	right: 40px;
+}
+
+.p_daytime {
+	width: 60px;
+	position: absolute;
+	top: 370px;
+	left: 168px;
+}
+
+.p_sunup {
+	width: 60px;
+    position: absolute;
+    top: 370px;
+    left: 30px;
+}
+
+.p_sundown {
+	width: 60px;
+	position: absolute;
+	top: 370px;
+	right: 40px;
+}
+
+.hr1 {
+	/*border-bottom: 5px solid #000000;*/
+	height: 1px;
+	/*background-color: red;*/
+	position: relative;
+	top: 127px;
+
+}
+
+.hr2 {
+	position: relative;
+	top: 252px;
+}
+
+.hr3 {
+	position: relative;
+	top: 362px;
+}
+
+.hr4 {
+	position: relative;
+	left: -10px;
+}

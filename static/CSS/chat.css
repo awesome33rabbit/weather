@@ -1,0 +1,95 @@
+*{
+    margin: 0 auto;
+}
+#chartroom {
+    width: 400px;
+    height: 700px;
+    background-color: #8BBDFD;
+    border-radius: 10px;
+    margin: 0 auto;
+    visibility: hidden;
+    position: absolute;
+    top: 0px;
+    left: 400px;
+}
+#block {
+    width: 330px;
+    height: 25px;
+    background-color: #6EADFD;
+    border: 1px solid #428BCA;
+    position: absolute;
+    left: 50px;
+    top: 5px;
+    border-radius: 10px;
+    line-height: 25px;
+    text-align: center;
+    color: #357EBD
+}
+#room_size {
+    width: 380px;
+    height: 590px;
+    overflow-y: auto;
+    background-color: #C4E1FF;
+    border: 1px solid #428BCA;
+    border-radius: 10px;
+    position: relative;
+    top: 35px;
+}
+#sendmsg {
+    position: absolute;
+    top: 625px;
+    width: 390px;
+    height: 100px;
+    size: 100px;
+}
+
+.send_msg {
+    text-align: right;
+    width: 380px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: pink;
+    color: #014B94;
+}
+.return_msg {
+    width: 260px;
+    height: 30px;
+    text-align: left;
+    border-radius: 10px;
+    background-color: lightblue;
+    color: #E87079;
+}
+#robot {
+    width: 380px;
+    height: 40px;
+    resize: none;
+    position: absolute;
+    left: 7px;
+    top: 5px;
+    border: 1px solid #428BCA;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #428BCA;
+    outline: none;
+}
+#btn-send{
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    display:block;
+    text-align:center;
+    font-family:arial,verdana,sans-serif,'新宋体';
+    font-weight:bold;
+    background:#428bca;
+    color:#fff;
+    text-decoration:none;
+    border: 3px solid #357ebd;
+    cursor: pointer;
+}
+#btn-send:hover {
+    background:#1165ae;
+}
+
+.png {
+    vertical-align: text-top;
+}
