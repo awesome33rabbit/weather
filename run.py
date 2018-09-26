@@ -1,5 +1,4 @@
-from flask import Flask, request, session, g, redirect, url_for,\
-    abort, render_template, flash
+from flask import Flask, request, redirect, url_for, render_template
 from flaskext.mysql import MySQL
 from settings import Settings
 from bs4 import BeautifulSoup
