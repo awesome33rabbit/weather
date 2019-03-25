@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="/static/js/jquery-3.2.1.js"></script>
+    <style type="text/css">
+        form{
+            width: 400px;
+            height: 300px;
+            padding: 13px;
+            position: absolute;
+            border-radius: 10px;
+            text-align: center;
+
+        }
+        input{
+            width: 250px;
+            height: 30px;
+            margin-top: 10px;
+            border: 0;
+            border-radius: 5px;
+        }
+        #background {
+            width: 400px;
+            height: 260px;
+            border-radius: 10px;
+            /*background-image: url('{{url_for('static', filename='pic/home.jpg')}}');*/
+            /*background:#428bca;*/
+            background-color: rgba(235,242,249,0.7);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin: auto auto;
+            align-items: center;
+            position: relative;
+            top: 100px;
+        }
+        #re{
+            width: 120px;
+            height: 28px;
+            border-radius: 5px;
+            text-align:center;
+            font-family:arial,verdana,sans-serif,'新宋体';
+            font-weight:bold;
+            /*background-color: #5AB4CE;*/
+            background-color: #6CB2F0;
+            color:#fff;
+            text-decoration:none;
+            cursor: pointer;
+            position: absolute;
+            left: 30px;
+            bottom: 10px;
+            font-size: 15px;
+            line-height: 28px;
+        }
+        #back{
+            display: block;
+            width: 120px;
+            height: 28px;
+            border-radius: 5px;
+            text-align:center;
+            line-height: 28px;
+            font-family:arial,verdana,sans-serif,'新宋体';
+            font-weight:bold;
+            /*background:#6CB2F0;*/
+            /*background-color: #5AB4CE;*/
+            background-color: #6CB2F0;
+            color:#fff;
+            text-decoration:none;
+            cursor: pointer;
+            position: absolute;
+            right: 50px;
+            bottom: 10px;
+            font-size: 15px;
+        }
+        #image_logo {
+            margin: 0px;
+        }
+        #msg {
+            color: red;
+            font-size: 15px;
+            font-weight: bold;
+            position: absolute;
+            left: 179px;
+            top: 73px;
+        }
+        #frame1 {
+            position: absolute;
+            top: 82px;
+            left: 15px;
+            width: 400px;
+        }
+        .text-input1 {
+            position: absolute;
+            left: 0px;
+        }
+        #check_register {
+            position: absolute;
+            left: 260px;
+            top: 15px;
+        }
+        .text-input2 {
+            position: absolute;
+            left: 0px;
+            top: 40px;
+        }
+        #check_pwd1 {
+            position: absolute;
+            left: 260px;
+            top: 55px;
+        }
+        .text-input3 {
+            position: absolute;
+            left: 0px;
+            top: 80px;
+        }
+        #check_pwd2 {
+            position: absolute;
+            left: 260px;
+            top: 95px;
+        }
+        #frame2 {
+            position: absolute;
+            top: 232px;
+            left: 215px;
+        }
+    </style>
+</head>
+<body>
+    <div id="background">
+        <form action="/yz_register" method="post">
+            {% block msg %}{% endblock %}
+            <div id="err"></div>
+            <p id="image_logo"><img src="static/pic/logo2.png" width="70px" height="60px">
+            </p><br>
+            <div id="frame1">
+                <input type="text" name="username" id="username" placeholder="请输入用户名" autocomplete="off" onfocus="this.placeholder=''" onblur="this.placeholder='请输入用户名'" minlength="6" maxlength="12" class='text-input1'>
+                <span id="check_register"></span>
+                <br>
+                <input type="password" name="upwd1" id="upwd1" placeholder="请输入密码" onfocus="this.placeholder=''" onblur="this.placeholder='请输入密码'" minlength="6" maxlength="16" class='text-input2'>
+                <span id="check_pwd1"></span><br>
+                <input type="password" name="upwd2" id="upwd2" placeholder="请再次输入密码" onfocus="this.placeholder=''" onblur="this.placeholder='请再次输入密码'" minlength="6" maxlength="16" class='text-input3'>
+                <span id="check_pwd2"></span>
+                <br>
+            </div>
+            <div id="frame2">
+                <input type="submit" name="" value="注册" id="re" disabled="disabled"><br>
+                <a href="/" id="back">返回</a>
+            </div>
+        </form>
+        <!-- <script type="text/javascript">
+            var pwd1 = document.getElementsByTagName('input')[1];
+            var pwd2 = document.getElementsByTagName('input')[2];
+            pwd2.onblur = function(){
+                if(pwd1.value != pwd2.value){
+                    alert('重复输入密码不相同');
+                    // var err = document.getElementById('err')
+                    // err.innerHTML = '重复输入密码不相同';
+                }
+            }
+        </script> -->
+        <script>
+            $("#upwd1").focus(function() {
+                if ($('#upwd1').val() != "" && $('#upwd2').val() != "") {
+                    $("#re").removeAttr('disabled');
+                } else {
+                    $("#re").attr('disabled', true);
+                }
+            })
+            $("#upwd1").blur(function() {
+                if ($('#upwd1').val() != "" && $('#upwd2').val() != "") {
+                    $("#re").removeAttr('disabled');
+                } else {
+                    $("#re").attr('disabled', true);
+                }
+            })
+            $("#upwd2").focus(function() {
+                if ($('#upwd1').val() != "" && $('#upwd2').val() != "") {
+                    $("#re").removeAttr('disabled');
+                } else {
+                    $("#re").attr('disabled', true);
+                }
+            })
+            $("#upwd2").blur(function() {
+                if ($('#upwd1').val() != "" && $('#upwd2').val() != "") {
+                    $("#re").removeAttr('disabled');
+                } else {
+                    $("#re").attr('disabled', true);
+                }
+            })
+        </script>
+        <script src="/static/js/common.js"></script>
+        <script>
+            $(function () {
+                $("#username").blur(function () {
+                    // 1. 获取xhr
+                    var xhr = createXhr();
+                    // 2. 创建请求
+                    xhr.open('POST', '/check_register', true);
+                    // 3. 设置回调函数
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState === 4 && xhr.status ===200) {
+                            $("#check_register").html(xhr.responseText);
+                        }
+                    };
+                    // 4. 设置请求消息头
+                    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                    // 5. 发送请求
+                    xhr.send('username=' + $('#username').val());
+                })
+            })
+        </script>
+        <script>
+            $(function () {
+                $("#upwd1").blur(function () {
+                    // 1. 获取xhr
+                    var xhr = createXhr();
+                    // 2. 创建请求
+                    xhr.open('POST', '/check_pwd1', true);
+                    // 3. 设置回调函数
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState === 4 && xhr.status ===200) {
+                            $("#check_pwd1").html(xhr.responseText);
+                        }
+                    };
+                    // 4. 设置请求消息头
+                    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                    // 5. 发送请求
+                    xhr.send('upwd1=' + $('#upwd1').val());
+                })
+            })
+        </script>
+        <script>
+            $(function () {
+                $("#upwd2").blur(function () {
+                    // 1. 获取xhr
+                    var xhr = createXhr();
+                    // 2. 创建请求
+                    xhr.open('POST', '/check_pwd2', true);
+                    // 3. 设置回调函数
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState === 4 && xhr.status ===200) {
+                            $("#check_pwd2").html(xhr.responseText);
+                        }
+                    };
+                    // 4. 设置请求消息头
+                    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                    // 5. 发送请求
+                    xhr.send('upwd2=' + $('#upwd2').val() + '&' + 'upwd1=' + $('#upwd1').val());
+                })
+            })
+        </script>
+    </div>
+</body>
+</html>

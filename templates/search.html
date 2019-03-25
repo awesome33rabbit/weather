@@ -1,0 +1,147 @@
+{% extends "weather.html" %}
+
+<!-- {% block title %}首页{% endblock %} -->
+
+{% block weather_now %}
+<span class="location">{{ w[0][1] }}</span>
+<span class="now_t">{{ w[1][1][:] }}</span>
+<span class="feel_t">体感温度<br>{{ w[2][1] }}</span>
+<span class="now_wind">风向<br>{{ w[3][1] }}</span>
+<span class="wind_power">风速<br>{{ w[4][1] }}</span>
+<span class="pre">气压<br>{{ w[5][1] }}</span>
+<span class="wt1">湿度<br>{{ w[6][1] }}</span>
+<span class="air_q">空气质量<br>{{ w[7][1] }}</span>
+<span class="sun_up">日出<br>{{ w[8][1] }}</span>
+<span class="sun_down">日落<br>{{ w[9][1] }}</span>
+<span class="time_difference">日光照射<br>{{ w[10][1] }}</span>
+<hr class="hr1">
+<hr class="hr2">
+<hr class="hr3">
+{% endblock %}
+
+{% block day1 %}
+<span class="maxmin">{{ u[0][4] }}</span>
+<span class="wea1">{{ u[0][3] }}</span>
+{% endblock %}
+
+{% block day2 %}
+<span class="maxmin">{{ u[0][4] }}</span>
+<span class="wea1">{{ u[0][3] }}</span>
+{% endblock %}
+
+{% block day3 %}
+<span class="maxmin">{{ u[0][4] }}</span>
+<span class="wea1">{{ u[0][3] }}</span>
+{% endblock %}
+
+
+
+{% block page_content %}
+<table class="table_day" border="0" cellspacing="6px">
+<tr>
+{% for i in u %}
+    <td align="center">{{ i[1] }}</td>
+{% endfor %}
+</tr>
+
+<!-- <tr>
+{% for i in u %}
+    <td align="center">{{ i[2] }}</td>
+{% endfor %}
+</tr> -->
+
+<tr>
+{% for i in u %}
+    <td align="center">{{ i[3] }}</td>
+{% endfor %}
+</tr>
+
+<tr>
+{% for i in u %}
+    <td align="center">{{ i[4] }}</td>
+{% endfor %}
+</tr>
+
+<tr>
+{% for i in u %}
+    <td align="center">{{ i[5] }}</td>
+{% endfor %}
+</tr>
+
+<tr>
+{% for i in u %}
+    <td align="center">{{ i[5] }}</td>
+{% endfor %}
+</tr>
+
+<tr>
+{% for i in u %}
+    <td align="center">{{ i[6] }}</td>
+{% endfor %}
+</tr>
+
+<tr>
+{% for i in u %}
+    <td align="center">{{ i[7] }}</td>
+{% endfor %}
+</tr>
+</table>
+{% endblock %}
+
+
+<!-- index -->
+{% block index1 %}
+<span>{{ m[0][1] }}</span>
+<div class="index_show1">
+    <span class="span1">{{ m[1][1] }}</span>
+</div>
+{% endblock %}
+
+{% block index2 %}
+<span>{{ m[2][1] }}</span>
+<div class="index_show2">
+    <span class="span1">{{ m[3][1] }}</span>
+</div>
+{% endblock %}
+
+{% block index3 %}
+<span>{{ m[4][1] }}</span>
+<div class="index_show3">
+    <span class="span1">{{ m[5][1] }}</span>
+</div>
+{% endblock %}
+
+{% block index4 %}
+<span>{{ m[6][1] }}</span>
+<div class="index_show4">
+    <span class="span1">{{ m[7][1] }}</span>
+</div>
+{% endblock %}
+
+{% block index5 %}
+<span>{{ m[8][1] }}</span>
+<div class="index_show5">
+    <span class="span1">{{ m[9][1] }}</span>
+</div>
+{% endblock %}
+
+{% block index6 %}
+<span>{{ m[10][1] }}</span>
+<div class="index_show6">
+    <span class="span1">{{ m[11][1] }}</span>
+</div>
+{% endblock %}
+
+{% block index7 %}
+<span>{{ m[12][1] }}</span>
+<div class="index_show7">
+    <span class="span1">{{ m[13][1] }}</span>
+</div>
+{% endblock %}
+
+{% block index8 %}
+<span>{{ m[14][1] }}</span>
+<div class="index_show8">
+    <span class="span1">{{ m[15][1] }}</span>
+</div>
+{% endblock %}

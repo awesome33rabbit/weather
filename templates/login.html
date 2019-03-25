@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面</title>
+    <script src="/static/js/jquery-3.2.1.js"></script>
+    <style type="text/css">
+        #login_frame {
+            width: 400px;
+            height: 260px;
+            position: relative;
+            padding: 0px;
+            border-radius: 10px;
+            text-align: center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin: auto auto;
+            vertical-align: middle;
+            background-color: #EBF2F9;
+            top: 100px;
+        }
+
+        form p > * {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        #image_logo {
+            width: 400px;
+            height: 150px;
+            background: white url("{{url_for('static', filename='pic/background.gif')}}") no-repeat -12px -29px;
+            background-size: 130%;
+            position: relative;
+            top: -28px;
+        }
+        .logo {
+            position: absolute;
+            top: 30px;
+            left: 170px;
+        }
+
+        .label_input {
+            font-size: 14px;
+            font-family: 宋体;
+
+            width: 65px;
+            height: 28px;
+            line-height: 28px;
+            text-align: center;
+            /*font-weight: bold;*/
+
+            color: white;
+            background-color: #428BCA;
+            border-radius: 5px;
+        }
+
+        .text_field {
+            width: 278px;
+            height: 28px;
+            border-radius: 5px;
+            border: 0;
+        }
+
+        #btn_login {
+            font-size: 14px;
+            font-family: 宋体;
+
+            width: 120px;
+            height: 28px;
+            line-height: 28px;
+            text-align: center;
+
+            color: white;
+            background-color: #428BCA;
+            border-radius: 6px;
+            border: 0;
+
+            float: left;
+            left: 5px;
+        }
+
+        #register {
+            width: 120px;
+            height: 28px;
+            line-height: 28px;
+            text-align: center;
+            color: white;
+            background-color: #428BCA;
+            border-radius: 6px;
+            border: 0;
+            font-size: 14px;
+            color: white;
+            position: relative;
+            float: right;
+            right: 5px;
+            text-decoration: none;
+        }
+
+        #login_control {
+            padding: 0 28px;
+        }
+
+        #msg {
+            color: red;
+            font-size: 12px;
+            position: absolute;
+            top: 85px;
+            left: 110px;
+        }
+        #frame {
+            position: absolute;
+            top: 113px;
+            left: 26px;
+        }
+    </style>
+</head>
+
+<body>
+<div id="login_frame">
+
+    <p id="image_logo"><img class="logo" src="static/pic/logo.png" width="70px" height="60px">
+    </p>
+
+    <form method="post" action="/yz_login">
+        {% block msg %}{% endblock %}
+        <div id="frame">
+            <p><label class="label_input">用户名</label>
+            <input type="text" id="username" class="text_field" name="name" placeholder="手机/邮箱/用户名" onfocus="this.placeholder=''" onblur="this.placeholder='手机/邮箱/用户名'" autocomplete="off">
+            <p id="show"></p>
+        </p>
+
+        <p><label class="label_input">密码</label>
+            <input type="password" id="password" class="text_field" name="passwd" placeholder="密码" onfocus="this.placeholder=''" onblur="this.placeholder='密码'">
+        </p>
+
+        <div id="login_control">
+            <input type="submit" id="btn_login" value="登录"/>
+            <a href="/register" id="register">注册</a>
+        </div>
+        </div>
+    </form>
+    <script src="/static/js/common.js"></script>
+    <script>
+        $(function () {
+            $("#username").blur(function () {
+                // 1. 获取xhr
+                var xhr = createXhr();
+                // 2. 创建请求
+                xhr.open('POST', '/check_login', true);
+                // 3. 设置回调函数
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status ===200) {
+                        $("#show").html(xhr.responseText);
+                    }
+                };
+                // 4. 设置请求消息头
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                // 5. 发送请求
+                xhr.send('username=' + $('#username').val());
+            })
+        })
+    </script>
+</div>
+
+</body>
+</html>
