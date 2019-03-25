@@ -4,7 +4,7 @@ class MysqlPython:
     def __init__(self,
                 host='localhost',
                 user='root',
-                password='123456',
+                password='******',
                 port=3306,
                 database='weather_data',
                 charset='utf8'):
