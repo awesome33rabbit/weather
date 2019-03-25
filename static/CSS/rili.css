@@ -7,18 +7,12 @@ body{
 	height:700px;
 	margin: 0;
 	transition-duration: 0.3s;
-	/*position: relative*/
 	position: absolute;
 	top: 0px;
     left: 400px;
-	/*background-color: blue;*/
 	border-radius: 10px;
 	visibility: hidden;
 }
-
-/*#daybtn:active #event_window{
-	display: visible;
-}*/
 
 #event_window{
 	width: 400px;
@@ -109,7 +103,6 @@ body{
 	text-align: center;
 	font-weight: bold;
 	font-size: 140px;
-	/*background-color: red;*/
 	position: absolute;
 	top: 30px;
 	left: 15px;
@@ -117,7 +110,6 @@ body{
 
 #day_info{
 	width:200px;
-	/*background-color: red;*/
 	position: absolute;
 	top: 90px;
 	left: 210px;
@@ -140,7 +132,6 @@ body{
 	text-align: right;
 	font-weight: bold;
 	background-color: rgba(255,255,255,0.7);
-	/*background-color: pink;*/
 	text-align: center;
 	line-height: 30px;
 	border-radius: 3px;
@@ -206,7 +197,6 @@ body{
 	color: black;
 	width: 114px;
 	text-align: center;
-	/*border-bottom: 1px solid white;*/
 	padding: 5px 0px;
 	font-weight: bold;
 }
@@ -262,14 +252,11 @@ button:hover{
 }
 
 .note {
-	/*position: absolute;*/
 	margin-left: 0px;
 	border: 3px solid lightblue;
 	width: 354px;
 }
-.dele {
-	/*float: left;*/
-}
+
 #events_list {
 	border: 1px solid lightblue;
 }

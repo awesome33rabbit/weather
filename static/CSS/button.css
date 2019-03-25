@@ -1,5 +1,4 @@
 #button1 {
-	/*padding: 20px;*/
 	width: 40px;
 	height: 40px;
 	background-color: lightblue;
@@ -10,7 +9,6 @@
 }
 
 #button2 {
-	/*padding: 20px;*/
 	width: 70px;
 	height: 30px;
 	background-color: lightblue;
@@ -22,7 +20,6 @@
 }
 
 #button3 {
-	/*padding: 20px;*/
 	width: 70px;
 	height: 30px;
 	background-color: lightblue;
@@ -34,7 +31,6 @@
 }
 
 #button4 {
-	/*padding: 20px;*/
 	width: 70px;
 	height: 30px;
 	background-color: lightblue;
@@ -46,7 +42,6 @@
 }
 
 #button5 {
-	/*padding: 20px;*/
 	width: 70px;
 	height: 30px;
 	background-color: lightblue;
@@ -58,7 +53,6 @@
 }
 
 #close1 {
-	/*z-index: 100;*/
 	width: 25px;
 	height: 25px;
 	position: absolute;
@@ -67,7 +61,6 @@
 }
 
 #close2 {
-	/*z-index: 100;*/
 	width: 35px;
 	height: 25px;
 	position: absolute;
@@ -80,7 +73,6 @@
 }
 
 #close3 {
-	/*z-index: 100;*/
 	width: 35px;
 	height: 25px;
 	position: absolute;
@@ -90,7 +82,6 @@
 }
 
 #close4 {
-	/*z-index: 100;*/
 	width: 35px;
 	height: 25px;
 	position: absolute;
@@ -100,7 +91,6 @@
 }
 
 #close5 {
-	/*z-index: 100;*/
 	width: 35px;
 	height: 25px;
 	position: absolute;
@@ -110,15 +100,11 @@
 }
 
 
-
-#button1, #button2, #button3, #button4, #button5 {
+#button1, #button2, #button3, #button4, #button5, #btn-voice {
 	display:block;
-/*	width:202px;
-	height:52px;*/
 	text-align:center;
 	font-family:arial,verdana,sans-serif,'新宋体';
 	font-weight:bold;
-/*	font-size:22px;*/
 	background:#428bca;
 	color:#fff;
 	text-decoration:none;
@@ -138,10 +124,13 @@
 #button2:hover,
 #button3:hover,
 #button4:hover,
+#button5:hover,
 .search_city:hover,
 #close2:hover,
 #close3:hover,
-#close4:hover {
+#close4:hover,
+#close5:hover,
+#btn-voice:hover {
 	background:#1165ae;
 }
 button:active{
@@ -160,14 +149,10 @@ button:active{
 	text-decoration:none;
 	border: 3px solid #357ebd;
 	cursor:pointer;
-	/*background-color: black;*/
-    /*position: absolute;*/
 }
 
 #cityname {
 	height: 23px;
-	/*background-color: rgba(110,173,253,0.8);*/
-	/*background-color:transparent;*/
 	background-color: #8BBDFD;
 	border: 1px;
 	outline: none;

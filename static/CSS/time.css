@@ -2,11 +2,9 @@
 	box-sizing: border-box;
 	width: 300px;
 	height: 180px;
-	/*background-color: pink;*/
 }
 
 #time {
-	/*color: rgb(21, 159, 238);*/
 	color: white;
 	font-size: 70px;
 	-webkit-app-region: drag;
@@ -17,7 +15,6 @@
 }
 
 #data {
-	/*color: rgb(21, 159, 238);*/
 	color: white;
 	font-size: 20px;
 	position: absolute;
@@ -30,7 +27,6 @@
 	color: rgb(21, 159, 238);
 	font-size: 20px;
 	color: white;
-	/*background-color: red;*/
 	position: absolute;
 	top: 100px;
 	left: 215px;

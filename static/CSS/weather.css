@@ -6,14 +6,10 @@
 
     body {
         background-color: transparent;
-/*        width: 410px;
-        height: 710px;*/
-        /*font-family: times, STHupo;*/
         font-family: arial,"微软雅黑";
     }
 
     p {
-        /*background-color: pink;*/
         width: 100px;
         height: 100px;
     }
@@ -44,28 +40,9 @@
         -webkit-border-radius: 6px;
     }
 
-/*::-webkit-scrollbar-track-piece {
-    background-color:#f5f5f5;
-    border-left:1px solid #d2d2d2;
-}
-::-webkit-scrollbar {
-    width:13px;
-    height:13px;
-}
-::-webkit-scrollbar-thumb {
-    background-color:#c2c2c2;
-    background-clip:padding-box;
-    border:1px solid #979797;
-    min-height:28px;
-}
-::-webkit-scrollbar-thumb:hover {
-    border:1px solid #636363;
-    background-color:#929292;
-}*/
     #mybackground {
         width: 400px;
         height: 700px;
-        /*background-color: rgba(110,173,253,0.8);*/
         background-color: #6EADFD;
         position: relative;
         top: 100px;
@@ -74,43 +51,24 @@
     }
 
     #wea {
-        /*color: rgb(75, 194, 112);*/
-        /*color: rgb(218, 233, 37);*/
-        /*color: rgb(255, 1238, 128);*/
-        /*color: rgb(21, 159, 238);*/
-        /*color: rgb(20, 121, 211);*/
         color: white;
         width: 400px;
         height: 450px;
         position: absolute;
         top: 200px;
-        /*background-color: lightblue;*/
         border-radius: 10px;
-        /*display: none;*/
-        /*visibility: hidden;*/
-        /*-webkit-user-select:none;*/
     }
 
     #page2 {
         position: absolute;
         top: 0px;
         left: 400px;
-        /*display: none;*/
         visibility: hidden;
     }
     #info{
         width:400px;
         height: 280px;
-        /*OVERFLOW-X: scroll;*/
         overflow-x: scroll;
-/*        scrollbar-face-color:red;
-        scrollbar-shadow-color:#B3DDF7;
-        scrollbar-highlight-color:#B3DDF7;
-        scrollbar-3dlight-color:#EBEBE4;
-        scrollbar-darkshadow-color:#EBEBE4;
-        scrollbar-track-color:#F4F4F0;
-        scrollbar-arrow-color:#000000;*/
-        /*background-color: rgba(255,255,224,0.5);*/
         background-color: #A2D8FA;
         position: absolute;
         top: 430px;
@@ -119,16 +77,12 @@
     #wea_index{
         width:400px;
         height: 700px;
-        /*background-color: rgba(255,255,224,0.5);*/
-        /*background: #8BBDFD;*/
         background-color:  #8BBDFD;
         position: absolute;
         top: 0px;
         left: 400px;
-        /*display: none;*/
         visibility: hidden;
         border-radius: 10px;
-        /*transition-duration: 2s;*/
     }
 
     #pre {
@@ -140,8 +94,6 @@
     #day_msg {
         width: 400px;
         height: 700px;
-        /*background-color: blue;*/
-        /*background-color: rgba(110,173,253,1);*/
         background-color: #8BBDFD;
         position: absolute;
         border-radius: 10px;
@@ -156,11 +108,7 @@
     .wea_now {
         width: 400px;
         height: 700px;
-        /*background-color: rgba(255,0,0,1);*/
-        /*background-color: pink;*/
         position: absolute;
-        /*left: 5px;*/
-        /*top: 120px*/
     }
 
     .location {
@@ -205,7 +153,6 @@
     }
 
     .pre {
-        /*color: red;*/
         font-size: 20px;
         position: absolute;
         left: 300px;
@@ -215,7 +162,6 @@
     }
 
     .wt1 {
-        /*color: red;*/
         font-size: 20px;
         position: absolute;
         left: 180px;
@@ -225,7 +171,6 @@
     }
 
     .air_q {
-        /*color: red;*/
         font-size: 20px;
         position: absolute;
         left: 25px;
@@ -238,7 +183,6 @@
         font-size: 20px;
         position: absolute;
         left: 25px;
-        /*top: 420px;*/
         top: 430px;
         text-align: center;
         line-height: 30px;
@@ -266,31 +210,21 @@
     .day123 {
         width: 400px;
         height: 425px;
-        /*background-color: red;*/
         position: absolute;
         border-radius: 10px 10px 0 0;
         top: 16px;
         left: 10px;
     }
 
-/*    .day1,.day2,.day3{
-        display: inline-block;
-        left: 5px;
-    }*/
-
     .day1 {
         width: 400px;
         height: 145px;
-        /*background-color: rgba(233,104,107,0.5);*/
-        /*position: absolute;*/
         position: relative;
     }
 
     .day2 {
         width: 400px;
         height: 145px;
-        /*background-color: rgba(157,180,250,0.5);*/
-        /*position: absolute;*/
         position: relative;
 
     }
@@ -298,21 +232,17 @@
     .day3 {
         width: 400px;
         height: 145px;
-        /*background-color: rgba(255,192,203,0.5);*/
         position: relative;
-        /*position: relative;*/
     }
 
     .day_time {
         font-size: 35px;
-        /*color: rgb(139, 0, 139);*/
         color: white;
         position: absolute;
         left: 20px;
         top: 10px;
     }
     .maxmin {
-        /*background-color: blueviolet;*/
         color: rgb(216, 191, 216);
         color: white;
         position: absolute;
@@ -331,32 +261,26 @@
     }
 
     .wea1 {
-        /*background-color: pink;*/
         position: absolute;
         right: 20px;
         top: 70px;
         font-size: 38px;
         font-family: arial,"微软雅黑";
-        /*color: rgb(216, 191, 216);*/
         color: white;
     }
 
     .table_day {
         width: 1370px;
         height: 165px;
-        /*color: rgb(138, 43, 226);*/
         color: white;
-        /*border: 1px solid white;*/
         font-size: 21px;
         font-family: arial,"微软雅黑";
     }
 
     .index_desc1 {
-        /*background:#0CF;*/
         background-color: #8BBDFD;
         height:170px;
         width:195px;
-        /*position: relative;*/
         text-align: center;
         border-radius: 10px 0 0 0;
         border-bottom: 1px solid white;
@@ -365,11 +289,9 @@
     }
 
     .index_desc2 {
-        /*background:#0CF;*/
         background-color: #8BBDFD;
         height:170px;
         width:195px;
-        /*position: relative;*/
         text-align: center;
         border-radius: 0px 10px 0 0;
         border-bottom: 1px solid white;
@@ -435,9 +357,7 @@
     .index_show1 {
         width:190px;
         height:150px;
-        /*background:#F09;*/
         background: #8BBDFD;
-        /*background: red;*/
         position:absolute;
         top:1px;
         left: 5px;
@@ -446,16 +366,13 @@
         font-size: 12px;
         color: white;
         text-align: left;
-        /*transition: 1s;*/
     }
 
 
     .index_show2 {
         width:190px;
         height:150px;
-        /*background:#F09;*/
         background: #8BBDFD;
-        /*background: red;*/
         position:absolute;
         top:1px;
         right: 4px;
@@ -464,15 +381,12 @@
         font-size: 12px;
         color: white;
         text-align: left;
-        /*transition: 0.1s;*/
     }
 
     .index_show3 {
         width:190px;
         height:150px;
-        /*background:#F09;*/
         background: #8BBDFD;
-        /*background: red;*/
         position:absolute;
         top: 0px;
         left: 6px;
@@ -481,15 +395,12 @@
         font-size: 12px;
         color: white;
         text-align: left;
-        /*transition: 0.3s;*/
     }
 
     .index_show4 {
         width:190px;
         height:150px;
-        /*background:#F09;*/
         background: #8BBDFD;
-        /*background: red;*/
         position:absolute;
         top: 173px;
         right: 6px;
@@ -498,15 +409,12 @@
         font-size: 12px;
         color: white;
         text-align: left;
-        /*transition: 0.3s;*/
     }
 
     .index_show5 {
         width:190px;
         height:150px;
-        /*background:#F09;*/
         background: #8BBDFD;
-        /*background: red;*/
         top: 346px;
         left: -0.5px;
         position:absolute;
@@ -515,15 +423,12 @@
         font-size: 12px;
         color: white;
         text-align: left;
-        /*transition: 0.3s;*/
     }
 
     .index_show6 {
-        /*box-sizing: border-box;*/
         width:190px;
         height:150px;
         background: #8BBDFD;
-        /*background: red;*/
         position:absolute;
         top: 346px;
         right: 4px;
@@ -531,88 +436,72 @@
         font-size: 12px;
         color: white;
         text-align: left;
-        /*transition: 0.3s;*/
     }
 
     .index_show7 {
         width:190px;
         height:150px;
-        /*background:#F09;*/
         top: 518px;
         background: #8BBDFD;
-        /*background: red;*/
         position:absolute;
         opacity: 0;
         display: block;
         font-size: 12px;
         color: white;
         text-align: left;
-        /*transition: 0.3s;*/
     }
 
     .index_show8 {
         width:190px;
         height:150px;
-        /*background:#F09;*/
         top: 518px;
         right: 4px;
         background: #8BBDFD;
-        /*background: red;*/
         position:absolute;
         opacity: 0;
         color: white;
         text-align: left;
-        /*font-size: 20px;*/
-        /*transition: 0.3s;*/
     }
 
     .index_desc1:hover .index_show1 {
-        /*color: #656e73;*/
         color: white;
         opacity: 1;
         transition: 1s;
     }
 
     .index_desc2:hover .index_show2 {
-        /*color: #656e73;*/
         color: white;
         opacity: 1;
         transition: 1s;
 
     }
     .index_desc3:hover .index_show3 {
-        /*color: #656e73;*/
         color: white;
         opacity: 1;
         transition: 1s;
     }
     .index_desc4:hover .index_show4 {
-        /*color: #656e73;*/
         color: white;
         opacity: 1;
         transition: 1s;
     }
     .index_desc5:hover .index_show5 {
-        /*color: #656e73;*/
         color: white;
         opacity: 1;
         transition: 1s;
     }
     .index_desc6:hover .index_show6 {
-        /*color: #656e73;*/
         color: white;
         color: white;
         opacity: 1;
         transition: 1s;
     }
     .index_desc7:hover .index_show7 {
-        /*color: #656e73;*/
         color: white;
         opacity: 1;
         transition: 1s;
     }
     .index_desc8:hover .index_show8 {
-        /*color: #656e73;*/
         color: white;
         opacity: 1;
         transition: 1s;
@@ -624,7 +513,6 @@
     }
 
     #wea_index span {
-        /*background-color: black;*/
         display: block;
         width: 197px;
     }
@@ -634,7 +522,6 @@
         top: 35px;
         font-size: 17px;
         display: table-cell;
-        /*background-color: black;*/
         vertical-align: middle;
     }
 
