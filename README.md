@@ -4,7 +4,6 @@
 > mysql(pymysql、SQLAlchemy)
 
 > flask
-
 > HTML/CSS/JS(AJAX)
 
 
