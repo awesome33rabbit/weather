@@ -17,7 +17,6 @@ document.getElementById("button2").onclick = function() {
         document.getElementById('event_window').style.display='none';
         document.getElementById('main').style.width='400px';
         document.getElementById('hide').style.display='none';
-
     } else { nav2.style.visibility = 'hidden';
             nav3.style.visibility = 'hidden';
             }
@@ -34,7 +33,6 @@ document.getElementById("button3").onclick = function() {
         document.getElementById('event_window').style.display='none';
         document.getElementById('main').style.width='400px';
         document.getElementById('hide').style.display='none';
-
     } else { nav3.style.visibility = 'hidden';
              nav2.style.visibility = 'hidden'; }
 }
@@ -47,7 +45,6 @@ document.getElementById("button4").onclick = function() {
         nav5.style.visibility = 'hidden';
         document.getElementById('mybackground').style.width='800px';
         setTimeout(function(){nav4.style.visibility = 'visible';},200);
-
     } else { nav4.style.visibility = 'hidden';
              nav2.style.visibility = 'hidden'; }
 }
@@ -63,7 +60,6 @@ document.getElementById("button5").onclick = function() {
         document.getElementById('event_window').style.display='none';
         document.getElementById('main').style.width='400px';
         document.getElementById('hide').style.display='none';
-
     } else { nav4.style.visibility = 'hidden';
              nav2.style.visibility = 'hidden';
              nav3.style.visibility = 'hidden';

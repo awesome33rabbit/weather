@@ -55,7 +55,7 @@ function refreshdate(){
 	var len = monthdays.length;
 	for(i=len;i<42;i++)
 		monthdays.push('');
-	
+
 	// 农历信息
 	// console.log(calendar.solar2lunar(now_year,now_month+1,now_day));
 	// 对应年月日的农历信息
