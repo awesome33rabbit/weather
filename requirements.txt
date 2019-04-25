@@ -1,6 +1,6 @@
-beautifulsoup4
-Flask
-PyMySQL
-requests
-flask_sqlalchemy
-
+pymysql==0.9.3
+requests==2.21.0
+BeautifulSoup4==4.7.1
+flask==1.0.2
+flask-mysql==1.4.0
+flask-sqlalchemy==1.3.3
