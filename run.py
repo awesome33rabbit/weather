@@ -1,5 +1,4 @@
 from flask import Flask, request, redirect, url_for, render_template
-from flaskext.mysql import MySQL
 from bs4 import BeautifulSoup
 import pymysql
 import urllib
@@ -21,7 +20,7 @@ from flask_sqlalchemy import SQLAlchemy
 pymysql.install_as_MySQLdb()
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:******@localhost:3306/user_data'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:123456@localhost:3306/user_data'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
 app.config['SECRET_KEY'] = 'INPUT A STARING'
@@ -45,13 +44,11 @@ main.main()
 
 
 # 配置连接数据库
-mysql = MySQL()
-app.config['MYSQL_DATABASE_HOST'] = 'localhost'
-app.config['MYSQL_DATABASE_USER'] = 'root'
-app.config['MYSQL_DATABASE_PASSWORD'] = '******'
-app.config['MYSQL_DATABASE_DB'] = 'user_data'
-mysql.init_app(app)
-db = mysql.connect()
+db = pymysql.connect(host='localhost',
+                     user='root',
+                     password='123456',
+                     database='user_data',
+                     charset='utf8mb4')
 
 
 # 返回主页请求页面
@@ -107,7 +104,7 @@ def yz_login():
             msg = '用户名或密码错误，请重新输入！'
             return render_template('err.html', msg=msg)
         else:
-            conn = pymysql.connect(host='127.0.0.1', user='root', password='******', db='weather_data', charset='utf8')
+            conn = pymysql.connect(host='127.0.0.1', user='root', password='123456', db='weather_data', charset='utf8')
             cur = conn.cursor()
 
             sql = "select * from weather_week"
@@ -202,7 +199,7 @@ def search():
 
     conn = pymysql.connect(host='127.0.0.1',
                            user='root',
-                           password='******',
+                           password='123456',
                            charset='utf8')
     cur = conn.cursor()
     sql = 'use %s' % username
@@ -221,6 +218,7 @@ def search():
     m = cur.fetchall()
 
     conn.close()
+    print(w)
     return render_template('search.html', u=u, w=w, m=m, loginname=username)
 
 

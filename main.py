@@ -10,7 +10,6 @@ from settings import Settings
 from get import Get
 from city import citycode
 import function
-import show
 import create_weather_database
 import save_data
 
@@ -53,4 +52,4 @@ def main():
     save_data.save_weather_week(weather_week_data)
     save_data.save_index_week(air_index_data)
 
-main()
+# main()

@@ -1,6 +1,6 @@
 from pymysql import *
 
-class MysqlPython:
+class MysqlPython():
     def __init__(self,
                 host='localhost',
                 user='root',

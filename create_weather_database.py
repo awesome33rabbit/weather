@@ -3,7 +3,7 @@ import pymysql
 # 1. 创建与数据库连接的对象
 db = pymysql.connect(host='localhost',
                      user='root',
-                     password='******',
+                     password='123456',
                      # database='weather_data',
                      charset='utf8mb4')
 
